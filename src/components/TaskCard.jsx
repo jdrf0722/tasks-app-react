@@ -5,12 +5,12 @@ function TaskCard({ task }) {
   const { deleteTask } = useContext(TaskContext);
 
   return (
-    <div className=" bg-gray-800 text-white rounded-md ">
-      <div className="px-6 py-4">
-        <div class="font-bold text-xl mb-2">{task.title}</div>
+    <div className="bg-gray-800 text-white p-6 rounded-md ">
+      <div className="overflow-hidden">
+        <p className="text-xl font-bold capitalize mb-2">{task.title}</p>
         <p className="text-gray-500 text-sm">{task.description} </p>
       </div>
-      <div className="p-4">
+      <div className="pt-2">
         <button
           className="bg-red-500 px-2 py-1 rounded-md mt-4 hover:bg-red-400 w-full block"
           onClick={() => {
