@@ -22,24 +22,24 @@ function TaskForm() {
     <div className="max-w-md mx-auto">
       <form onSubmit={handleSubmit} className="bg-slate-800 p-10 mb-4 rounded-lg">
         <h1 className="text-2xl font-bold mb-3 text-white text-center">
-          Crea tu Tarea
+          Create your Task
         </h1>
         <input
-          placeholder="Escribe tu tarea"
+          placeholder="Type your task"
           onChange={(e) => setTitle(e.target.value)}
           autoFocus
           value={title}
           className="text-center p-3 w-full mb-3 mt-4 rounded-lg bg-slate-200"
         />
         <textarea
-          placeholder="Escribe la descripción de la tarea"
+          placeholder="Type your task desciption"
           value={description}
           onChange={(e) => setDescription(e.target.value)}
           className=" pt-5 w-full mb-2 rounded-md text-center resize-none bg-slate-200"
         ></textarea>
         <div className="flex justify-center items-center">
           <button className="bg-indigo-500 px-4 py-2 text-white rounded-lg w-full mb-4">
-            Guardar
+            Save
           </button>
         </div>
       </form>
