@@ -29,16 +29,16 @@ function TaskForm() {
           onChange={(e) => setTitle(e.target.value)}
           autoFocus
           value={title}
-          className="text-center p-3 w-full mb-3 mt-4 rounded-2xl bg-slate-200"
+          className="text-center p-3 w-full mb-3 mt-4 rounded-lg bg-slate-200"
         />
         <textarea
           placeholder="Escribe la descripción de la tarea"
           value={description}
           onChange={(e) => setDescription(e.target.value)}
-          className=" pt-5 w-full mb-2 rounded-xl text-center resize-none bg-slate-200"
+          className=" pt-5 w-full mb-2 rounded-md text-center resize-none bg-slate-200"
         ></textarea>
         <div className="flex justify-center items-center">
-          <button className="bg-indigo-500 px-4 py-2 text-white rounded-2xl w-full mb-4">
+          <button className="bg-indigo-500 px-4 py-2 text-white rounded-lg w-full mb-4">
             Guardar
           </button>
         </div>
