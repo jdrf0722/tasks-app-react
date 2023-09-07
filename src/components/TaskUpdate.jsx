@@ -1,7 +1,12 @@
 import { useState } from "react";
+import { TaskContext } from "../context/TaskContext.jsx";
+import { useContext } from "react";
 
-function TaskUpdate() {
+function TaskUpdate({ id }) {
   const [showInputs, setShowInputs] = useState(false);
+  const [title, setTitle] = useState("");
+  const [description, setDescription] = useState("");
+  const { updateTask } = useContext(TaskContext);
 
   const Form = () => (
     <>
@@ -32,6 +37,7 @@ function TaskUpdate() {
       className="bg-blue-500 px-2 py-1 rounded-md mt-4 hover:bg-blue-400 w-full block"
       onClick={() => {
         setShowInputs(false);
+        updateTask(id);
       }}
     >
       Save

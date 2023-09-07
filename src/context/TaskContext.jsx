@@ -5,7 +5,7 @@ export const TaskContext = createContext();
 
 export function TaskContextProvider(props) {
 
-  const [tasks, setTasks] = useState([]); //const tasks = []
+  const [tasks, setTasks] = useState([]); //tasks = []
 
   useEffect(() => {
     setTasks(data);
@@ -26,9 +26,8 @@ export function TaskContextProvider(props) {
     setTasks(tasks.filter((task) => task.id !== taskId));
   }
 
-  function updateTask(taskId) {
-    const task = tasks.filter((task) => task.id !== taskId);
-    console.log(task);
+  function updateTask(task) {
+    console.log(task)
   }
 
   return (

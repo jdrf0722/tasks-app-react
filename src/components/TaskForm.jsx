@@ -9,7 +9,6 @@ function TaskForm() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(description);
     createTask({
       title,
       description,
