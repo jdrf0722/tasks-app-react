@@ -29,7 +29,7 @@ function Form({ taskId, showInputs }) {
       />
       <textarea
         placeholder="Type your task desciption"
-        className=" block mb-4 rounded-md text-center resize-none pt-5 bg-slate-200 w-full text-black"
+        className=" block mb-4 rounded-md text-center resize-none pt-2 md:pt-5 bg-slate-200 w-full text-black"
         value={description}
         onChange={(e) => setDescription(e.target.value)}
       ></textarea>
