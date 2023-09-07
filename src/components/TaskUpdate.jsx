@@ -2,7 +2,7 @@ import { useState } from "react";
 import { TaskContext } from "../context/TaskContext.jsx";
 import { useContext } from "react";
 
-const Form = ({ taskId, showInputs }) => {
+function Form({ taskId, showInputs }) {
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
   const { updateTask } = useContext(TaskContext);
@@ -41,7 +41,7 @@ const Form = ({ taskId, showInputs }) => {
       </button>
     </form>
   );
-};
+}
 
 function TaskUpdate({ taskId }) {
   const [showInputs, setShowInputs] = useState(false);
