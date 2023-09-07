@@ -33,8 +33,8 @@ export function TaskContextProvider(props) {
       }else{
         return {
           ...task,
-          title: tasktoUpdate.title,
-          description: tasktoUpdate.description,
+          title: tasktoUpdate.title ? tasktoUpdate.title : task.title,
+          description: tasktoUpdate.description ? tasktoUpdate.description : task.description,
         };
       }
     });
