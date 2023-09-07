@@ -12,7 +12,7 @@ function TaskCard({ task }) {
         <p className="text-gray-500 text-sm">{task.description} </p>
       </div>
       <div className="pt-2">
-        <TaskUpdate key={task.id} id={task.id}/>
+        <TaskUpdate key={task.id} taskId={task.id}/>
         <button
           className="bg-red-500 px-2 py-1 rounded-md mt-4 hover:bg-red-400 w-full block"
           onClick={() => {
