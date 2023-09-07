@@ -11,6 +11,9 @@ export function TaskContextProvider(props) {
   }, []);
 
   function createTask(task) {
+    if (!task.title) {
+      return alert("Title is needed to save a new task");
+    }
     setTasks([
       ...tasks,
       {
@@ -26,14 +29,16 @@ export function TaskContextProvider(props) {
   }
 
   function updateTask(tasktoUpdate) {
-    const newTasks = tasks.map(task => {
+    const newTasks = tasks.map((task) => {
       if (task.id != tasktoUpdate.taskId) {
-        return task        
-      }else{
+        return task;
+      } else {
         return {
           ...task,
           title: tasktoUpdate.title ? tasktoUpdate.title : task.title,
-          description: tasktoUpdate.description ? tasktoUpdate.description : task.description,
+          description: tasktoUpdate.description
+            ? tasktoUpdate.description
+            : task.description,
         };
       }
     });
