@@ -24,6 +24,10 @@ export function TaskContextProvider(props) {
     ]);
   }
 
+  function findTask(taskId) {
+     return tasks.find((task) => task.id === taskId);    
+  }
+
   function deleteTask(taskId) {
     setTasks(tasks.filter((task) => task.id !== taskId));
   }
@@ -49,6 +53,7 @@ export function TaskContextProvider(props) {
     <TaskContext.Provider
       value={{
         tasks,
+        findTask,
         deleteTask,
         updateTask,
         createTask,
