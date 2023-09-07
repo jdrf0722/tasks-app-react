@@ -28,7 +28,7 @@ function Form({ taskId, showInputs }) {
         value={title}
       />
       <textarea
-        placeholder="Update desciption"
+        placeholder="Update desciption (optional)"
         className=" block mb-4 rounded-md text-center resize-none sm:pt-2 md:pt-5 bg-slate-200 w-full text-black text-xs sm:text-base"
         value={description}
         onChange={(e) => setDescription(e.target.value)}

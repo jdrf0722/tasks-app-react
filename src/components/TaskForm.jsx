@@ -24,7 +24,7 @@ function TaskForm() {
           Create your Task
         </h1>
         <input
-          placeholder="Type your task"
+          placeholder="Type your task title"
           onChange={(e) => setTitle(e.target.value)}
           autoFocus
           value={title}
