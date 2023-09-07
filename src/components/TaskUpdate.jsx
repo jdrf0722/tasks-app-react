@@ -2,8 +2,7 @@ import { useState } from "react";
 import { TaskContext } from "../context/TaskContext.jsx";
 import { useContext } from "react";
 
-export function TaskUpdate({ taskId }) {
-  const [showInputs, setShowInputs] = useState(false);
+const Form = ({ taskId, showInputs }) => {
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
   const { updateTask } = useContext(TaskContext);
@@ -17,10 +16,10 @@ export function TaskUpdate({ taskId }) {
     });
     setTitle("");
     setDescription("");
-    setShowInputs(false);
+    showInputs(false);
   };
 
-  const Form = () => (
+  return (
     <form onSubmit={handleSubmit}>
       <input
         placeholder="Update your task title"
@@ -42,6 +41,10 @@ export function TaskUpdate({ taskId }) {
       </button>
     </form>
   );
+};
+
+function TaskUpdate({ taskId }) {
+  const [showInputs, setShowInputs] = useState(false);
 
   const Update = () => (
     <button
@@ -54,5 +57,15 @@ export function TaskUpdate({ taskId }) {
     </button>
   );
 
-  return <>{showInputs ? <Form key={taskId} /> : <Update />}</>;
+  return (
+    <>
+      {showInputs ? (
+        <Form showInputs={setShowInputs} taskId={taskId} />
+      ) : (
+        <Update />
+      )}
+    </>
+  );
 }
+
+export default TaskUpdate;
