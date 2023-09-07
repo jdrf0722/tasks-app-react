@@ -22,20 +22,20 @@ function Form({ taskId, showInputs }) {
   return (
     <form onSubmit={handleSubmit}>
       <input
-        placeholder="Update your task title"
-        className="p-2 mb-3 mt-4 rounded-md bg-slate-200 w-full text-center text-black"
+        placeholder="Update title"
+        className="text-xs sm:text-base p-1 sm:p-2 mb-3  rounded-md bg-slate-200 w-full text-center text-black"
         onChange={(e) => setTitle(e.target.value)}
         value={title}
       />
       <textarea
-        placeholder="Type your task desciption"
-        className=" block mb-4 rounded-md text-center resize-none pt-2 md:pt-5 bg-slate-200 w-full text-black"
+        placeholder="Update desciption"
+        className=" block mb-4 rounded-md text-center resize-none sm:pt-2 md:pt-5 bg-slate-200 w-full text-black text-xs sm:text-base"
         value={description}
         onChange={(e) => setDescription(e.target.value)}
       ></textarea>
       <button
         type="submit"
-        className="bg-blue-500 px-2 py-1 rounded-md mt-4 hover:bg-blue-400 w-full block"
+        className="bg-blue-500 sm:px-2 sm:py-1 rounded-md mt-4 hover:bg-blue-400 w-full block"
       >
         Save
       </button>
@@ -48,7 +48,7 @@ function TaskUpdate({ taskId }) {
 
   const Update = () => (
     <button
-      className="bg-blue-500 px-2 py-1 rounded-md mt-1.5 sm:mt-4 hover:bg-blue-400 w-full block"
+      className="bg-blue-500 sm:px-2 sm:py-1 rounded-md mt-1.5 sm:mt-4 hover:bg-blue-400 w-full block"
       onClick={() => {
         setShowInputs(true);
       }}
