@@ -3,9 +3,11 @@ import { TaskContext } from "../context/TaskContext.jsx";
 import { useContext } from "react";
 
 function Form({ taskId, showInputs }) {
-  const [title, setTitle] = useState("");
-  const [description, setDescription] = useState("");
   const { updateTask } = useContext(TaskContext);
+  const { findTask } = useContext(TaskContext);
+  const [title, setTitle] = useState(findTask(taskId).title);
+  const [description, setDescription] = useState(findTask(taskId).description);
+
 
   const handleSubmit = (e) => {
     e.preventDefault();
