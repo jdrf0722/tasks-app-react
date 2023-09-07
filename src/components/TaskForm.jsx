@@ -34,7 +34,7 @@ function TaskForm() {
           placeholder="Type your task desciption (optional)"
           value={description}
           onChange={(e) => setDescription(e.target.value)}
-          className="py-2 md:py-5 w-full mb-2 rounded-md text-center resize-none bg-slate-200"
+          className="p-1 md:p-5 w-full mb-2 rounded-md text-center resize-none bg-slate-200"
         ></textarea>
         <div className="flex justify-center items-center">
           <button className="bg-indigo-500 px-4 py-2 text-white rounded-lg w-full mb-4">
