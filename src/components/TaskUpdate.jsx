@@ -48,8 +48,12 @@ function Form({ taskId, showInputs }) {
 function TaskUpdate({ taskId }) {
   const [showInputs, setShowInputs] = useState(false);
 
-  const Update = () => (
-    <button
+  return (
+    <>
+      {showInputs ? (
+        <Form showInputs={setShowInputs} taskId={taskId} />
+      ) : (
+        <button
       className="bg-blue-500 sm:px-2 sm:py-1 rounded-md mt-1.5 sm:mt-4 hover:bg-blue-400 w-full block"
       onClick={() => {
         setShowInputs(true);
@@ -57,14 +61,6 @@ function TaskUpdate({ taskId }) {
     >
       Update
     </button>
-  );
-
-  return (
-    <>
-      {showInputs ? (
-        <Form showInputs={setShowInputs} taskId={taskId} />
-      ) : (
-        <Update />
       )}
     </>
   );
