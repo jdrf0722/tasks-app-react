@@ -19,7 +19,7 @@ function TaskCard({ task }) {
             deleteTask(task.id);
           }}
         >
-          Eliminar
+          Delete
         </button>
         
       </div>
