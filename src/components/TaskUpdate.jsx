@@ -8,7 +8,6 @@ function Form({ taskId, showInputs }) {
   const [title, setTitle] = useState(findTask(taskId).title);
   const [description, setDescription] = useState(findTask(taskId).description);
 
-
   const handleSubmit = (e) => {
     e.preventDefault();
     updateTask({
@@ -54,13 +53,13 @@ function TaskUpdate({ taskId }) {
         <Form showInputs={setShowInputs} taskId={taskId} />
       ) : (
         <button
-      className="bg-blue-500 sm:px-2 sm:py-1 rounded-md mt-1.5 sm:mt-4 hover:bg-blue-400 w-full block"
-      onClick={() => {
-        setShowInputs(true);
-      }}
-    >
-      Update
-    </button>
+          className="bg-blue-500 sm:px-2 sm:py-1 rounded-md mt-1.5 sm:mt-4 hover:bg-blue-400 w-full block"
+          onClick={() => {
+            setShowInputs(true);
+          }}
+        >
+          Update
+        </button>
       )}
     </>
   );
