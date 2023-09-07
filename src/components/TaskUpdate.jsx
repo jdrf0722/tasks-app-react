@@ -48,7 +48,7 @@ function TaskUpdate({ taskId }) {
 
   const Update = () => (
     <button
-      className="bg-blue-500 px-2 py-1 rounded-md mt-4 hover:bg-blue-400 w-full block"
+      className="bg-blue-500 px-2 py-1 rounded-md mt-1.5 sm:mt-4 hover:bg-blue-400 w-full block"
       onClick={() => {
         setShowInputs(true);
       }}

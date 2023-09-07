@@ -26,7 +26,6 @@ export function TaskContextProvider(props) {
   }
 
   function updateTask(tasktoUpdate) {
-    console.log(tasktoUpdate);
     const newTasks = tasks.map(task => {
       if (task.id != tasktoUpdate.taskId) {
         return task        
