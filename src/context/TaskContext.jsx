@@ -26,11 +26,17 @@ export function TaskContextProvider(props) {
     setTasks(tasks.filter((task) => task.id !== taskId));
   }
 
+  function updateTask(taskId) {
+    const task = tasks.filter((task) => task.id !== taskId);
+    console.log(task);
+  }
+
   return (
     <TaskContext.Provider
       value={{
         tasks,
         deleteTask,
+        updateTask,
         createTask,
       }}
     >
