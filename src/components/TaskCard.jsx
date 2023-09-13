@@ -8,7 +8,7 @@ function TaskCard({ task }) {
   return (
     <div className="bg-gray-800 text-white p-3 md:p-6 rounded-md ">
       <div className="overflow-hidden">
-        <p className="text-base sm:text-xl font-bold capitalize sm:mb-2">{task.title}</p>
+        <p className="text-base sm:text-xl font-bold capitalize sm:mb-2 text-center msm:text-left">{task.title}</p>
         <p className="text-gray-500 text-sm">{task.description} </p>
       </div>
       <div className="mt-3.5 md:mt-4">
